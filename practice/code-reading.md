@@ -15,6 +15,7 @@ Take a look at the following code:
 ```
 
 Explain why line 4 and line 6 output different numbers.
+This is because of the scope differences. In line 4 x is local variable of function f1 and in line 6 x is a global variable which defined in line 1.
 
 ## Question 2
 
@@ -34,6 +35,7 @@ console.log(y)
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+This will log 10 and then throw an error, x is a global variable and y is within scope of the function and cannot be used outside of it.
 
 ## Question 3
 
@@ -62,3 +64,5 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+First console.log is going to be value 9 as const x passed to the function is not going to be changed.
+Second console.log is going to be { x: 10 } as value of the key x in the object can be changed using reference.

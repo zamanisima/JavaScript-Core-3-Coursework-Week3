@@ -70,3 +70,20 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+const namesOfGryffindorHouseMembers = (hogwartsMembers) => {
+  hogwartsMembers.forEach(({ firstName, lastName, house }) => {
+    if (house === "Gryffindor")
+      console.log("Character name:", firstName, lastName);
+  });
+};
+
+namesOfGryffindorHouseMembers(hogwarts);
+
+const nameOfTeacherWithAPet = (hogwartsMembers) => {
+  hogwartsMembers.find(({ firstName, lastName, pet, occupation }) => {
+    if (pet && occupation === "Teacher")
+      console.log("Teacher name:", firstName, lastName);
+  });
+};
+
+nameOfTeacherWithAPet(hogwarts);
